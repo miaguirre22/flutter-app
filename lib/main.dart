@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:english_words/english_words.dart';
+import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
 
@@ -79,6 +79,9 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
+    final wordPair = WordPair.random();
+
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -119,6 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_unlikes',
               style: Theme.of(context).textTheme.display1,
             ),
+            Text(wordPair.asPascalCase),
           ],
         ),
       ),
